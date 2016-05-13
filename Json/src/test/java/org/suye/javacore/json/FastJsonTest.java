@@ -5,7 +5,9 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
+import org.suye.javacore.domain.Group;
 import org.suye.javacore.domain.Person;
+import org.suye.javacore.domain.User;
 
 import java.util.HashMap;
 import java.util.List;
@@ -186,6 +188,54 @@ public class FastJsonTest {
         suye.setSkills(skills);
 
         return suye;
+    }
+
+
+    @Test
+    public void testObjectToJsonString2(){
+        Group group = new Group();
+        group.setId(0L);
+        group.setName("admin");
+
+        User guestUser = new User();
+        guestUser.setId(2L);
+        guestUser.setName("guest");
+
+        User rootUser = new User();
+        rootUser.setId(3L);
+        rootUser.setName("root");
+
+        group.getUsers().add(guestUser);
+        group.getUsers().add(rootUser);
+
+        String jsonString = JSON.toJSONString(group);
+
+        System.out.println(jsonString);
+
+        Assert.assertNotNull(jsonString);
+    }
+
+    @Test
+    public void testJsonStringToObject(){
+        String jsonString = "{\"id\":0,\"name\":\"admin\",\"users\":[{\"id\":2,\"name\":\"guest\"},{\"id\":3,\"name\":\"root\"}]}";
+
+        Group group = JSON.parseObject(jsonString,Group.class);
+
+
+        Assert.assertEquals(new Long(0L), group.getId());
+        Assert.assertEquals("admin",group.getName());
+
+        List<User> users = group.getUsers();
+        User user1 = users.get(0);
+
+        Assert.assertEquals(new Long(2),user1.getId());
+        Assert.assertEquals("guest",user1.getName());
+
+        User user2 = users.get(1);
+
+
+        Assert.assertEquals(new Long(3),user2.getId());
+        Assert.assertEquals("root",user2.getName());
     }
 
 
