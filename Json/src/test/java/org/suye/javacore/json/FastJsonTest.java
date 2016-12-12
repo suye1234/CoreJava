@@ -23,8 +23,6 @@ public class FastJsonTest {
         String jsonString = "{\"identifyId\":310105,\"male\":true,\"name\":\"suye\",\"skills\":{\"Java\":\"Master\",\"Scrum\":\"Good\",\"Spring\":\"Good\",\"JSF\":\"Good\"}}";
 
         JSONObject person = JSON.parseObject(jsonString);
-
-
         Assert.assertEquals(310105, person.get("identifyId"));
         Assert.assertEquals(true, person.get("male"));
         Assert.assertEquals("suye", person.get("name"));
@@ -67,7 +65,6 @@ public class FastJsonTest {
         Assert.assertEquals("Master", skill.get("Java"));
         Assert.assertEquals("Good", skill.get("Scrum"));
 
-
         JSONArray personArray = (JSONArray) JSON.parse(jsonArrayString);
 
         person = (JSONObject) personArray.get(0);
@@ -100,12 +97,10 @@ public class FastJsonTest {
     public void testParseJsonStringToList() {
         String jsonString = "[{\"identifyId\":310105,\"male\":true,\"name\":\"SuYe\",\"skills\":{\"Java\":\"Master\",\"Scrum\":\"Good\",\"Spring\":\"Good\",\"JSF\":\"Good\"}},{\"identifyId\":310110,\"male\":false,\"name\":\"YuTong\",\"skills\":{\"Eat\":\"Good\",\"Run\":\"Master\",\"Sleep\":\"Good\",\"Play\":\"General\"}}]";
 
-
         List<Person> personList = JSON.parseArray(jsonString, Person.class);
 
         Person suye = personList.get(0);
         Person yutong = personList.get(1);
-
 
         Assert.assertEquals(new Long(310105), suye.getIdentifyId());
         Assert.assertEquals(true, suye.isMale());
@@ -127,41 +122,41 @@ public class FastJsonTest {
     }
 
     @Test
-    public void testObjectToJsonString(){
+    public void testObjectToJsonString() {
         Person suye = new Person();
 
         suye.setName("suye");
         suye.setIdentifyId(310105L);
         suye.setMale(true);
 
-        Map<String,String> skills = new HashMap<String, String>();
-        skills.put("Java","Master");
-        skills.put("Scrum","Good");
+        Map<String, String> skills = new HashMap<String, String>();
+        skills.put("Java", "Master");
+        skills.put("Scrum", "Good");
         skills.put("Spring", "Good");
         skills.put("JSF", "Good");
 
         suye.setSkills(skills);
 
-        Assert.assertEquals("{\"identifyId\":310105,\"male\":true,\"name\":\"suye\",\"skills\":{\"Java\":\"Master\",\"Scrum\":\"Good\",\"Spring\":\"Good\",\"JSF\":\"Good\"}}",JSON.toJSONString(suye));
+        Assert.assertEquals("{\"identifyId\":310105,\"male\":true,\"name\":\"suye\",\"skills\":{\"Java\":\"Master\",\"Scrum\":\"Good\",\"Spring\":\"Good\",\"JSF\":\"Good\"}}", JSON.toJSONString(suye));
 
     }
 
 
     @Test
-    public void testObjectToJsonStringWithFormat(){
+    public void testObjectToJsonStringWithFormat() {
         Person suye = createPerson();
 
-        String jsonString = JSON.toJSONString(suye,true);
+        String jsonString = JSON.toJSONString(suye, true);
         System.out.print(jsonString);
 
         Assert.assertNotNull(jsonString);
     }
 
     @Test
-    public void testObjectToJsonObject(){
+    public void testObjectToJsonObject() {
         Person suye = createPerson();
 
-        JSONObject person =  (JSONObject)JSON.toJSON(suye);
+        JSONObject person = (JSONObject) JSON.toJSON(suye);
 
         Assert.assertEquals(new Long(310105), person.get("identifyId"));
         Assert.assertEquals(true, person.get("male"));
@@ -179,9 +174,9 @@ public class FastJsonTest {
         suye.setIdentifyId(310105L);
         suye.setMale(true);
 
-        Map<String,String> skills = new HashMap<String, String>();
-        skills.put("Java","Master");
-        skills.put("Scrum","Good");
+        Map<String, String> skills = new HashMap<String, String>();
+        skills.put("Java", "Master");
+        skills.put("Scrum", "Good");
         skills.put("Spring", "Good");
         skills.put("JSF", "Good");
 
@@ -192,7 +187,7 @@ public class FastJsonTest {
 
 
     @Test
-    public void testObjectToJsonString2(){
+    public void testObjectToJsonString2() {
         Group group = new Group();
         group.setId(0L);
         group.setName("admin");
@@ -216,26 +211,25 @@ public class FastJsonTest {
     }
 
     @Test
-    public void testJsonStringToObject(){
+    public void testJsonStringToObject() {
         String jsonString = "{\"id\":0,\"name\":\"admin\",\"users\":[{\"id\":2,\"name\":\"guest\"},{\"id\":3,\"name\":\"root\"}]}";
 
-        Group group = JSON.parseObject(jsonString,Group.class);
-
+        Group group = JSON.parseObject(jsonString, Group.class);
 
         Assert.assertEquals(new Long(0L), group.getId());
-        Assert.assertEquals("admin",group.getName());
+        Assert.assertEquals("admin", group.getName());
 
         List<User> users = group.getUsers();
         User user1 = users.get(0);
 
-        Assert.assertEquals(new Long(2),user1.getId());
-        Assert.assertEquals("guest",user1.getName());
+        Assert.assertEquals(new Long(2), user1.getId());
+        Assert.assertEquals("guest", user1.getName());
 
         User user2 = users.get(1);
 
 
-        Assert.assertEquals(new Long(3),user2.getId());
-        Assert.assertEquals("root",user2.getName());
+        Assert.assertEquals(new Long(3), user2.getId());
+        Assert.assertEquals("root", user2.getName());
     }
 
 
