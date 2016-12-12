@@ -1,4 +1,4 @@
-package org.suye.corejava.abst;
+package org.suye.corejava.factory.abst;
 
 import org.junit.Assert;
 import org.junit.Test;
