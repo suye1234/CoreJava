@@ -2,12 +2,16 @@ package org.suye.corejava.prototype;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.suye.corejava.prototype.monkey.Monkey;
+import org.suye.corejava.prototype.monkey.TheGreatestSage;
 import org.suye.corejava.prototype.register.ConcretePrototype3;
 import org.suye.corejava.prototype.register.ConcretePrototype4;
 import org.suye.corejava.prototype.register.PrototypeManager;
 import org.suye.corejava.prototype.register.service.Prototype;
 import org.suye.corejava.prototype.simple.ConcretePrototype1;
 import org.suye.corejava.prototype.simple.SimpleClient;
+
+import java.io.IOException;
 
 /**
  * Created by Administrator on 2016/12/14.
@@ -35,5 +39,22 @@ public class PrototypeTest {
 
         Assert.assertEquals("ConcretePrototype3", p1.getName());
         Assert.assertEquals("ConcretePrototype4", p2.getName());
+    }
+
+
+    @Test
+    public void testTheGreatestSageClone(){
+        TheGreatestSage wukong = new TheGreatestSage(new Monkey());
+        wukong.change();
+
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    public void testTheGreatestSageCloneDeepClone() throws IOException, ClassNotFoundException {
+        TheGreatestSage wukong = new TheGreatestSage(new Monkey());
+        wukong.deepChange();
+
+        Assert.assertTrue(true);
     }
 }
