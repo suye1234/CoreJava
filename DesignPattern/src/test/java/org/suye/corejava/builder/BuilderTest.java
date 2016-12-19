@@ -4,6 +4,10 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.suye.corejava.builder.insurance.InsuranceBuilder;
 import org.suye.corejava.builder.insurance.InsuranceDirector;
+import org.suye.corejava.builder.kfc.KfcCashier;
+import org.suye.corejava.builder.kfc.KidsMealBuilderA;
+import org.suye.corejava.builder.kfc.KidsMealBuilderB;
+import org.suye.corejava.builder.kfc.service.KidsMeal;
 import org.suye.corejava.builder.message.GoodbyMessageBuilder;
 import org.suye.corejava.builder.message.MessageDirector;
 import org.suye.corejava.builder.message.WelcomeMessageBuilder;
@@ -64,4 +68,14 @@ public class BuilderTest {
 
         insuranceDirector.construct();
     }
+
+    @Test
+    public void testOrderKidsMeal(){
+        KidsMeal kidsMeal = new KfcCashier(new KidsMealBuilderB()).orderKidsMeal();
+
+        System.out.println(kidsMeal.toString());
+
+        Assert.assertTrue(true);
+    }
+
 }
