@@ -1,4 +1,4 @@
-package org.suye.corejava.wrapper.monkey.service;
+package org.suye.corejava.decorator.monkey.service;
 
 /**
  * Created by Administrator on 2016/12/19.

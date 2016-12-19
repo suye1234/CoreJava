@@ -1,6 +1,6 @@
-package org.suye.corejava.wrapper.monkey;
+package org.suye.corejava.decorator.monkey;
 
-import org.suye.corejava.wrapper.monkey.service.TheGreatestSage;
+import org.suye.corejava.decorator.monkey.service.TheGreatestSage;
 
 /**
  * Created by Administrator on 2016/12/19.

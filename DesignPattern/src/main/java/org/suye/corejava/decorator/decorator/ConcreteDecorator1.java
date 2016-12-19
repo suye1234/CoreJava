@@ -1,6 +1,6 @@
-package org.suye.corejava.wrapper.decorator;
+package org.suye.corejava.decorator.decorator;
 
-import org.suye.corejava.wrapper.decorator.service.Component;
+import org.suye.corejava.decorator.decorator.service.Component;
 
 /**
  * Created by Administrator on 2016/12/19.

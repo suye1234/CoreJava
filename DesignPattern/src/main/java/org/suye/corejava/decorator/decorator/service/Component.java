@@ -1,4 +1,4 @@
-package org.suye.corejava.wrapper.decorator.service;
+package org.suye.corejava.decorator.decorator.service;
 
 /**
  * Created by Administrator on 2016/12/19.
