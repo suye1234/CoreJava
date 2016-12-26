@@ -63,6 +63,9 @@ public class FlyweightTest {
         Shape shape6 = ShapeFactory.getShape("灰色");
         shape6.draw();
 
+        Shape shape7 = ShapeFactory.getShape("黑色");
+
+
         System.out.println("一共绘制了"+ShapeFactory.getSum()+"种颜色的圆形");
     }
 }

@@ -1,5 +1,6 @@
 package org.suye.corejava.proxy;
 
+import org.suye.corejava.flyweight.shape.service.Shape;
 import org.suye.corejava.proxy.service.AbstractObject;
 
 /**
