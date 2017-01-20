@@ -12,6 +12,8 @@ public class SpecialUrgentMessage extends AbstractMessage{
     }
 
     public void sendMessage() {
+        hurry();
+
         super.implementor.send();
     }
 
