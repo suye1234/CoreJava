@@ -5,9 +5,9 @@ import org.suye.corejava.builder.message.service.MessageBuilder;
 /**
  * Created by Administrator on 2016/12/13.
  */
-public class GoodbyMessageBuilder extends MessageBuilder {
+public class GoodbyeMessageBuilder extends MessageBuilder {
 
-    public GoodbyMessageBuilder() {
+    public GoodbyeMessageBuilder() {
         msg = new GoodbyeMessage();
     }
 

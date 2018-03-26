@@ -5,7 +5,10 @@
   <groupId>org.suye.corejava</groupId>
   <artifactId>DesignPattern</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <modules>
+        <module>../CoreJava</module>
+    </modules>
+    <packaging>pom</packaging>
 
   <name>DesignPattern</name>
   <url>http://maven.apache.org</url>
