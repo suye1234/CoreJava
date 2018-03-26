@@ -19,11 +19,11 @@ public class SenderFactory {
         }
     }
 
-    public Sender produceMail() {
+    public static Sender produceMail() {
         return new MailSender();
     }
 
-    public Sender produceSms() {
+    public static Sender produceSms() {
         return new SmsSender();
     }
 }
