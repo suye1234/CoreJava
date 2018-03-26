@@ -2,8 +2,9 @@ package org.suye.corejava.builder;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.suye.corejava.builder.insurance.InsuranceBuilder;
-import org.suye.corejava.builder.insurance.InsuranceDirector;
+import org.suye.corejava.builder.insurance.CarInsuranceContract;
+import org.suye.corejava.builder.insurance.base.InsuranceBuilder;
+import org.suye.corejava.builder.insurance.InsuranceSalesMan;
 import org.suye.corejava.builder.kfc.KfcCashier;
 import org.suye.corejava.builder.kfc.KidsMealBuilderB;
 import org.suye.corejava.builder.kfc.service.KidsMeal;
@@ -61,11 +62,9 @@ public class BuilderTest {
 
     @Test
     public void testCreateInsurance(){
-        InsuranceBuilder insuranceBuilder = new InsuranceBuilder();
+        InsuranceSalesMan insuranceSalesMan = new InsuranceSalesMan();
 
-        InsuranceDirector insuranceDirector = new InsuranceDirector(insuranceBuilder);
-
-        insuranceDirector.construct();
+        insuranceSalesMan.contract();
     }
 
     @Test

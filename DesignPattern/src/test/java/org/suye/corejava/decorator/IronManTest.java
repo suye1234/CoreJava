@@ -1,7 +1,10 @@
-package org.suye.corejava.adapter;
+package org.suye.corejava.decorator;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.suye.corejava.decorator.man.IronMan;
+import org.suye.corejava.decorator.man.Person;
+import org.suye.corejava.decorator.man.SuperMan;
 
 /**
  * Created by Administrator on 2016/12/12.

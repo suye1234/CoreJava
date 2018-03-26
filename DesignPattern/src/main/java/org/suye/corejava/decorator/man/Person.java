@@ -1,6 +1,4 @@
-package org.suye.corejava.adapter;
-
-import org.suye.corejava.adapter.service.IHumanBehavior;
+package org.suye.corejava.decorator.man;
 
 /**
  * Created by Administrator on 2016/12/12.

@@ -1,4 +1,4 @@
-package org.suye.corejava.adapter.service;
+package org.suye.corejava.decorator.man.service;
 
 /**
  * Created by Administrator on 2016/12/12.

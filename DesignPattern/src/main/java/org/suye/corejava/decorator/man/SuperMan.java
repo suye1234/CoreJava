@@ -1,6 +1,6 @@
-package org.suye.corejava.adapter;
+package org.suye.corejava.decorator.man;
 
-import org.suye.corejava.adapter.service.ISuperManBehavior;
+import org.suye.corejava.decorator.man.service.ISuperManBehavior;
 
 /**
  * 类适配器模式，继承了被适配类，并实现目标方法。
