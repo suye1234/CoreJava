@@ -17,27 +17,25 @@ public class AbstractFactoryTest {
     public void testInstallIntelComputer(){
         AbstractComputerFactory intelFactory = new IntelFactory();
 
-        Cpu cpu = intelFactory.createCpu();
-        Mainboard mainboard = intelFactory.createMainboard();
+        Computer intelComputer = new Computer(intelFactory);
 
-        cpu.calculate();
-        mainboard.installCpu();
+        intelComputer.installCompute();
+        intelComputer.work();
 
-        Assert.assertEquals(755, cpu.getPins());
-        Assert.assertEquals(755,mainboard.getCpuHoles());
+        Assert.assertEquals(755, intelComputer.getCpu().getPins());
+        Assert.assertEquals(755,intelComputer.getMainboard().getCpuHoles());
     }
 
     @Test
     public void testInstallAmdComputer(){
         AbstractComputerFactory amdFactory = new AmdFactory();
 
-        Cpu cpu = amdFactory.createCpu();
-        Mainboard mainboard = amdFactory.createMainboard();
+        Computer intelComputer = new Computer(amdFactory);
 
-        cpu.calculate();
-        mainboard.installCpu();
+        intelComputer.installCompute();
+        intelComputer.work();
 
-        Assert.assertEquals(938, cpu.getPins());
-        Assert.assertEquals(938,mainboard.getCpuHoles());
+        Assert.assertEquals(938, intelComputer.getCpu().getPins());
+        Assert.assertEquals(938,intelComputer.getMainboard().getCpuHoles());
     }
 }
