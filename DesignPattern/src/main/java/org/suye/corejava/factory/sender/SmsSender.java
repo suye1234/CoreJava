@@ -1,6 +1,4 @@
-package org.suye.corejava.factory;
-
-import org.suye.corejava.factory.Sender;
+package org.suye.corejava.factory.sender;
 
 /**
  * Created by suye on 2018/3/23.

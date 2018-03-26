@@ -1,10 +1,9 @@
 package org.suye.corejava.factory.polymorphic;
 
 import org.junit.Test;
-import org.suye.corejava.factory.Provider;
-import org.suye.corejava.factory.Sender;
-import org.suye.corejava.factory.SenderFactory;
-import org.suye.corejava.factory.SmsSenderFactory;
+import org.suye.corejava.factory.sender.Provider;
+import org.suye.corejava.factory.sender.Sender;
+import org.suye.corejava.factory.sender.SmsSenderFactory;
 
 /**
  * Created by suye on 2018/3/23.
