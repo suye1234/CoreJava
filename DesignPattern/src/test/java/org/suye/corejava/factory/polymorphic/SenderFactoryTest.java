@@ -1,7 +1,7 @@
 package org.suye.corejava.factory.polymorphic;
 
 import org.junit.Test;
-import org.suye.corejava.factory.sender.Provider;
+import org.suye.corejava.factory.sender.AbstractSenderFactory;
 import org.suye.corejava.factory.sender.Sender;
 import org.suye.corejava.factory.sender.SmsSenderFactory;
 
@@ -12,8 +12,8 @@ public class SenderFactoryTest {
     @Test
     public void testSenderFactory() {
         // 工厂方法模式
-        Provider provider = new SmsSenderFactory();
-        Sender sender = provider.produce();
+        AbstractSenderFactory senderFactory = new SmsSenderFactory();
+        Sender sender = senderFactory.produce();
         sender.send();
     }
 }
