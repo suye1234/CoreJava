@@ -1,6 +1,6 @@
-package org.suye.corejava.decorator.man;
+package org.suye.corejava.decorator.marvel;
 
-import org.suye.corejava.decorator.man.service.ISuperManBehavior;
+import org.suye.corejava.decorator.marvel.service.ISuperManBehavior;
 
 /**
  * 对象适配器模式，包装了被适配类的实例，实现目标方法。

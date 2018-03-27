@@ -8,7 +8,7 @@ import org.suye.corejava.template.service.Worker;
 public class Postman extends Worker{
     @Override
     protected void doWork() {
-        System.out.println("Post man is working");
+        System.out.println("Post marvel is working");
     }
 
     @Override

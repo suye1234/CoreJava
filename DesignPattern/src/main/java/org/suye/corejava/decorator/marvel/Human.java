@@ -1,6 +1,6 @@
-package org.suye.corejava.decorator.man;
+package org.suye.corejava.decorator.marvel;
 
-import org.suye.corejava.decorator.man.service.IHumanBehavior;
+import org.suye.corejava.decorator.marvel.service.IHumanBehavior;
 
 /**
  * 默认适配模式，提供部分方法的默认实现，子类只需实现想要实现的方法即可.

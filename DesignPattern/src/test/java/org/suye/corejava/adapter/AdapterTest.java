@@ -2,20 +2,38 @@ package org.suye.corejava.adapter;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.suye.corejava.adapter.service.Target;
+import org.suye.corejava.adapter.shape.*;
 
 /**
- * Created by suye on 2018/3/26.
+ * Created by suye on 2018/3/27.
  */
 public class AdapterTest {
+
     @Test
-    public void testAdapter(){
-        Adaptee adaptee = new Adaptee();
+    public void testClassAdapter(){
+        IDrawCircle classAdapter = new DrawClassAdapter();
 
-        Target target = new Adapter(adaptee);
+        classAdapter.drawCircle();
 
-        target.operation1();
-        target.operation2();
+        Assert.assertTrue(true);
+    }
+
+
+    @Test
+    public void testObjectAdapter(){
+        IDrawCircle objectAdapter = new DrawObjectAdapter(new DrawRectangle());
+
+        objectAdapter.drawCircle();
+
+        Assert.assertTrue(true);
+    }
+
+
+    @Test
+    public void testDefaultAdapter(){
+        IDraw defaultAdapter = new DrawRectangle();
+
+        defaultAdapter.drawRectangle();
 
         Assert.assertTrue(true);
     }

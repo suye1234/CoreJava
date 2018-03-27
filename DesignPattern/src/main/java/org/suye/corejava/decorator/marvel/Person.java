@@ -1,4 +1,4 @@
-package org.suye.corejava.decorator.man;
+package org.suye.corejava.decorator.marvel;
 
 /**
  * Created by Administrator on 2016/12/12.
