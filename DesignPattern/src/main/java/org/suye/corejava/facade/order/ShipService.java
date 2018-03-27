@@ -1,4 +1,4 @@
-package org.suye.corejava.facade;
+package org.suye.corejava.facade.order;
 
 /**
  * Created by suye on 2016/12/26.

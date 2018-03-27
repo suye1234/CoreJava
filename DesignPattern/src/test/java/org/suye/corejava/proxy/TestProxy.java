@@ -11,9 +11,9 @@ public class TestProxy {
 
     @Test
     public void testProxy() {
-        AbstractObject obj = new RealObject();
+        AbstractObject realObject = new RealObject();
 
-        AbstractObject proxyObj = new ProxyObject(obj);
+        AbstractObject proxyObj = new ProxyObject(realObject);
 
         proxyObj.operate();
 

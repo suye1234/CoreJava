@@ -2,7 +2,7 @@ package org.suye.corejava.template;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.suye.corejava.template.service.Worker;
+import org.suye.corejava.template.base.Worker;
 
 /**
  * Created by suye on 2017/1/20.

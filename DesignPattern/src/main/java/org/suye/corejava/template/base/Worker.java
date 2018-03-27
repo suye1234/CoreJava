@@ -1,4 +1,4 @@
-package org.suye.corejava.template.service;
+package org.suye.corejava.template.base;
 
 /**
  * Created by suye on 2017/1/20.
