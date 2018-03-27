@@ -13,12 +13,20 @@ public class Person extends Human{
 
     @Override
     public void speak() {
-        System.out.println(name + " is speaking");
+        System.out.println("Person: " + name + " is speaking");
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Person: " + name + " is running");
+    }
+
+    @Override
+    public void listen() {
+        System.out.println("Person: " + name + " is listening");
     }
 
     public String getName() {
         return name;
     }
-
-
 }

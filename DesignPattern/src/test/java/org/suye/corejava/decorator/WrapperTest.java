@@ -10,6 +10,10 @@ import org.suye.corejava.decorator.monkey.Bird;
 import org.suye.corejava.decorator.monkey.Fish;
 import org.suye.corejava.decorator.monkey.Monkey;
 import org.suye.corejava.decorator.monkey.service.TheGreatestSage;
+import org.suye.corejava.decorator.shape.Rectangle;
+import org.suye.corejava.decorator.shape.RedBorderDecorator;
+import org.suye.corejava.decorator.shape.Shape;
+import org.suye.corejava.decorator.shape.YellowBackgroundDecorator;
 import org.suye.corejava.decorator.window.Border;
 import org.suye.corejava.decorator.window.HorizontalScrollBar;
 import org.suye.corejava.decorator.window.VerticalScrollBar;
@@ -38,22 +42,39 @@ public class WrapperTest {
     }
 
     @Test
+    public void testShape(){
+        Shape rectangle = new Rectangle();
+
+        rectangle.draw();
+
+        rectangle = new RedBorderDecorator(rectangle);
+
+        rectangle.draw();
+
+        rectangle = new YellowBackgroundDecorator(rectangle);
+
+        rectangle.draw();
+
+        Assert.assertTrue(true);
+    }
+
+    @Test
     public void testMonkey(){
         TheGreatestSage sage = new Monkey();
 
         sage.move();
 
-        Bird bird = new Bird(sage);
+        TheGreatestSage bird = new Bird(sage);
 
         bird.move();
 
-        bird.fly();
+        ((Bird)bird).fly();
 
-        Fish fish = new Fish(bird);
+        TheGreatestSage fish = new Fish(bird);
 
         fish.move();
 
-        fish.swim();
+        ((Fish)fish).swim();
 
         Assert.assertTrue(true);
     }

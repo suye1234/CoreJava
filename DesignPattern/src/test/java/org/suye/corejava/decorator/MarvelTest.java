@@ -2,9 +2,10 @@ package org.suye.corejava.decorator;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.suye.corejava.decorator.marvel.IronMan;
+import org.suye.corejava.decorator.marvel.IronDecorator;
 import org.suye.corejava.decorator.marvel.Person;
-import org.suye.corejava.decorator.marvel.SpiderMan;
+import org.suye.corejava.decorator.marvel.SpiderDecorator;
+import org.suye.corejava.decorator.marvel.service.IHumanBehavior;
 
 /**
  * Created by Administrator on 2016/12/12.
@@ -13,26 +14,28 @@ public class MarvelTest {
 
     @Test
     public void testIronMan(){
-        org.suye.corejava.decorator.marvel.Person tonyStark = new Person("Tony Stark", 45);
+        IHumanBehavior tonyStark = new Person("Tony Stark", 45);
 
-        IronMan ironMan = new IronMan(tonyStark);
+        tonyStark = new IronDecorator(tonyStark);
 
-        ironMan.run();
-        ironMan.listen();
-        ironMan.speak();
-        ironMan.fly();
+        tonyStark.run();
+        tonyStark.listen();
+        tonyStark.speak();
+        ((IronDecorator)tonyStark).fly();
 
         Assert.assertTrue(true);
     }
 
     @Test
     public void testSuperMan(){
-        SpiderMan perterParker = new SpiderMan("Peter Parker", 18);
+        IHumanBehavior perterParker = new Person("Peter Parker", 18);
+
+        perterParker = new SpiderDecorator(perterParker);
 
         perterParker.run();
         perterParker.listen();
         perterParker.speak();
-        perterParker.fly();
+        ((SpiderDecorator)perterParker).climb();
 
         Assert.assertTrue(true);
     }
