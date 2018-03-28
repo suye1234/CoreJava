@@ -8,6 +8,6 @@ public class DrawClassAdapter extends DrawRectangle implements IDrawCircle {
     public void drawCircle() {
         super.drawRectangle();
 
-        System.out.printf("Draw circle finished..\r\n");
+        System.out.println("Draw circle finished..");
     }
 }

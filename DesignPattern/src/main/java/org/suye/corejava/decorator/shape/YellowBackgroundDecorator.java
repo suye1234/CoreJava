@@ -12,6 +12,6 @@ public class YellowBackgroundDecorator extends ShapeDecorator {
     public void draw() {
         super.decoratorShape.draw();
 
-        System.out.printf("Background is yellow....\r\n");
+        System.out.println("Background is yellow....");
     }
 }

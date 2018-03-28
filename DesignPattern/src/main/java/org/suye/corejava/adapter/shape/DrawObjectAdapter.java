@@ -14,6 +14,6 @@ public class DrawObjectAdapter implements IDrawCircle{
     public void drawCircle() {
         drawRectangle.drawRectangle();
 
-        System.out.printf("Draw circle finished....\r\n");
+        System.out.println("Draw circle finished....");
     }
 }

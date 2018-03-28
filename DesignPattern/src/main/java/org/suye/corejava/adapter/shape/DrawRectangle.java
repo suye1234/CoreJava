@@ -5,6 +5,6 @@ package org.suye.corejava.adapter.shape;
  */
 public class DrawRectangle extends DefaultDrawAdapter{
     public void drawRectangle() {
-        System.out.printf("Draw a rectangle.......\r\n");
+        System.out.println("Draw a rectangle.......");
     }
 }
